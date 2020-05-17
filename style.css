@@ -1,0 +1,245 @@
+/*
+CSS for Website for Gridlandish
+
+Copyright (C) 2017 Fiona MacNeill
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>
+
+////////////////////////
+//                    //
+//     Gridlandish    //
+//                    //
+//////////////////////*/
+
+
+/* CSS grid handwritten by Fiona MacNeill, inspired by: http://j4n.co/blog/Creating-your-own-css-grid-system
+|| https://github.com/h5bp/html5-boilerplate and Dave Gamache's Skeleton V2.0.4: http://getskeleton.com/
+|| One% CSS Grid: http://onepcssgrid.mattimling.com/ - Nov 2016
+|| 12 column layout - original pixel dimensions column: 65px, gutter: 15px
+|| This grid is used to layout all the text residing in the sections */
+
+/* The complete grid can be turned on for reference in the section just prior to the footer
+|| It is set to display none by default in the html file */
+
+* {
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: block;
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin: 0 auto 5% auto;
+    padding: 0 1% 0 1%;
+
+}
+
+/* General row alignment for the grid */
+
+.row-align{
+    clear: both;
+    margin: auto 5% auto 5%;
+}
+
+/* used in situations where the height of text columns need to match height */
+
+.single-row {
+    float: left;
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 2% auto;
+}
+
+.nofloat {
+    float: none;
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    float: left;
+    text-align: center;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin: 1% auto 1% auto;
+    padding: 1%;
+}
+
+/* Styling for free standing columns */
+.free-columns {
+    border: solid 2px #EEEEEE;
+    border-radius: 5px;
+    margin: 1em auto 2em auto;
+    padding: 2%;
+}
+
+/* One column width = 65px --> (65px x 12) + (15px x 12) = 960px total width
+            This is 12 columns across the screen width             */
+.col.col-0 {
+    width: 6.5%;
+    margin-right: 1.5%;
+
+}
+
+/* Two column widths : (65px x 2) = 130px + 15px = 145px per column
+             This is 6 columns across the screen width             */
+.col.col-1 {
+    width: 14.5%;
+    margin-right: 1.5%;
+
+}
+
+/* Three column widths : (65px x 3) = 195px + (15px x 2) = 225px per column
+                    This is 4 columns across the screen width             */
+.col.col-2 {
+    width: 22.5%;
+    margin-right: 1.5%;
+}
+
+/* Four column widths : (65px x 4) = 260px + (15px x 3) =  305px per column
+                    This is 3 columns across the screen width             */
+.col.col-3 {
+    width: 30.5%;
+    margin-right: 1.5%;
+
+}
+
+/* Six column widths : (65px x 6) = 390px + (15px x 5) =  465px per column
+                    This is 2 columns across the screen width             */
+.col.col-4 {
+    width: 46.5%;
+    margin-right: 1.5%;
+}
+
+/* twelve column widths : 960px (total width) - 15px = 945px
+                                   This runs across the entire screen width */
+.col.col-5 {
+    width: 94.5%;
+}
+
+/* eleven column widths for combined column plus margins and adjustment
+- Total width: (65 x 11) + (15 x 10 for margin-right value) =  865px
+                    This runs across 11 column widths - use with col-0 */
+
+.col-6.later {
+    width: calc((6.5% * 11) + (1.5% * 10));
+
+}
+
+/* ten column widths for combined column plus margins and adjustment
+                    This runs across 10 column widths - use with col-1 */
+
+.col-7.later {
+    width: calc((6.5% * 10) + (1.5% * 9));
+
+}
+
+/* nine column widths for combined column plus margins and adjustment
+                    This runs across 9 column widths - use with col-2 */
+
+.col-8.later {
+    width: calc((6.5% * 9) + (1.5% * 8));
+
+}
+
+/* eight column widths for combined column plus margins and adjustment
+                    This runs across 8 column widths - use with col-3 */
+
+.col-9.later {
+    width: calc((6.5% * 8) + (1.5% * 7));
+}
+
+/* six column widths for combined column plus margins and adjustment
+                    This runs across 6 column widths - use with col-4
+                    simpler to use 2 x col-4 when this effect is needed */
+
+.col-10.later {
+    width: calc((6.5% * 6) + (1.5% * 5));
+
+}
+
+/* This column is unique and not based on a column ancestor thus it needs it's own margin
+ although it is basically identical to col-9.
+ This runs across 8 column widths - use with col-3 or col 12 */
+
+.col-11.later {
+    width: calc((6.5% * 8) + (1.5% * 7));
+    margin-right: 1.5%;
+}
+
+/* Essentially the same as col-3, but included in the grid for organisational purposes */
+
+.col-12.later {
+    width: calc((6.5% * 4) + (1.5% * 3));
+
+}
+
+/* Basic Typography */
+
+h2 {
+    font-family: "Helvetica Neue", Helvetica, Arial sans-serif;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial sans-serif;
+}
+
+
+
+
+/* larger phone or phablet */
+@media (max-width: 470px) {
+
+    .col,
+    .col.col-0,
+    .col.col-1,
+    .col.col-2,
+    .col.col-3,
+    .col.col-4,
+    .col.col-5,
+    .col.col-6.later,
+    .col.col-7.later,
+    .col.col-8.later,
+    .col.col-9.later,
+    .col.col-10.later,
+    .col.col-11.later,
+    .col.col-12.later,
+    .col.device-img {
+        float: none;
+        width: 99%;
+        /* top | right | bottom | left */
+        margin: 1em 0 1em 0;
+    }
+
+    .resizable {
+        height: 100%;
+        width: 100%;
+    }
+
+}
+
+/* Resizeable div for iframe demonstration purposes only */
+
+.resizable {
+    resize: both;
+    overflow: auto;
+    border: 1px solid black;
+    height: 80%;
+    width: 80%;
+}
+
+footer {
+    position: relative;
+}
